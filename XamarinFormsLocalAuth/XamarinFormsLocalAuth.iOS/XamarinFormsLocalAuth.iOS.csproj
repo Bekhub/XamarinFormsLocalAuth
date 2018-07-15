@@ -87,6 +87,9 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
@@ -123,7 +126,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\UPMC\XamarinFormsLocalAuth.csproj">
+    <ProjectReference Include="..\XamarinFormsLocalAuth\XamarinFormsLocalAuth.csproj">
       <Project>{93013A1F-7D0B-4ECF-B05F-DB9CFCA568C3}</Project>
       <Name>XamarinFormsLocalAuth</Name>
     </ProjectReference>
